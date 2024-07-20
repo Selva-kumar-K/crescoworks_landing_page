@@ -8,13 +8,12 @@ import Sidebar from "./Sidebar";
 export default function Navbar() {
 
   const [state,setState] = useState(false)
-  console.log(state)
   return (
     <div
       className="relative py-3 bg-cover h-[970px] lg:h-screen w-full"
       style={{ backgroundImage: `url(${Image})` }}
     >
-      <div className="px-3 flex items-center lg:justify-between lg:py-5 lg:w-[80%] lg:mx-auto">
+      <div className={`px-3 flex items-center lg:justify-between lg:py-5 lg:w-[80%] lg:mx-auto`}>
         <div className="lg:hidden">
           <svg
             onClick={() => setState(true)}

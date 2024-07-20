@@ -14,10 +14,10 @@ export default function Sidebar({open, close} : Props) {
         </div>
         <div className="px-8">
         <div className="">
-            <h2>MENU</h2>
+            <h2 className="font-bold text-lg">MENU</h2>
             <ul className="flex flex-col space-y-5 mt-8 ">
-                {menus.map(menu => (
-                    <li className="border-t-[1px] border-slate-300 font-semibold text-lg py-3 text-slate-500">{menu}</li>
+                {menus.map((menu,index) => (
+                    <li className={`border-t-[1px] border-slate-300 font-semibold text-lg py-3 text-slate-500 ${index === 0 ? "text-blue-500" : ""}`}>{menu}</li>
                 ))}
             </ul>
         </div>

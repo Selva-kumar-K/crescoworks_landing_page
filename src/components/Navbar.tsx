@@ -1,17 +1,23 @@
+import { useState } from "react";
 import Logo from "../assets/CW-logo-white.svg";
 import Image from "../assets/blue-abstract-background_698452-2057.jpg";
 import { menus } from "../libs/menus";
 import HeroSection from "./HeroSection";
+import Sidebar from "./Sidebar";
 
 export default function Navbar() {
+
+  const [state,setState] = useState(false)
+  console.log(state)
   return (
     <div
-      className="py-3 bg-cover h-[970px] lg:h-screen"
+      className="relative py-3 bg-cover h-[970px] lg:h-screen w-full"
       style={{ backgroundImage: `url(${Image})` }}
     >
       <div className="px-3 flex items-center lg:justify-between lg:py-5 lg:w-[80%] lg:mx-auto">
         <div className="lg:hidden">
           <svg
+            onClick={() => setState(true)}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -48,6 +54,7 @@ export default function Navbar() {
       </div>
 
       <HeroSection/>
+      <Sidebar open={state} close={setState}/>
     </div>
   );
 }

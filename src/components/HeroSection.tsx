@@ -5,9 +5,9 @@ import Img4 from "../assets/img4.png";
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-col space-y-20  mt-20 h-[120vh] lg:h-[500px] lg:flex-row lg:justify-between lg:items-center lg:w-[80%] lg:mx-auto lg:mt-5 lg:gap-10">
+    <div className="flex flex-col space-y-20  mt-20 h-[120vh] lg:h-[500px] md:flex-row lg:justify-between lg:items-center lg:w-[80%] lg:mx-auto lg:mt-5 lg:gap-10">
       <div
-        className="flex flex-col gap-3 text-center max-w-sm mx-auto lg:text-start lg:mx-0 lg:max-w-2xl 
+        className="flex flex-col gap-3 px-10 text-center max-w-sm mx-auto lg:text-start lg:mx-0 lg:max-w-2xl lg:px-0
       "
       >
         <h2 className="text-2xl font-semibold text-white lg:text-3xl">
@@ -24,34 +24,19 @@ export default function HeroSection() {
           <button className="bg-blue-400 text-white px-10 py-3 font-semibold rounded-full w-fit">
             Demo Request
           </button>
-          <button className="bg-transparent text-white px-10 py-3 font-semibold  rounded-full w-fit border-2 border-slate-200">
+          <button className="bg-transparent text-white px-10 py-3 font-semibold  rounded-full w-fit border-2 border-slate-400 duration-700 hover:border-slate-100">
             Apply for Trial
           </button>
         </div>
       </div>
 
-      {/* <div className="relative left-[60px] lg:w-[45%] lg:left-0 lg:-top-60">
-        <div className="">
-          <img src={Img1} alt="" className="absolute w-[250px] lg:w-[350px]" />
-          <img
-            src={Img4}
-            alt=""
-            className="absolute w-[140px] right-28 lg:w-[250px] lg:-right-20 lg:-top-12"
-          />
-          <img src={Img2} alt="" className="absolute w-[150px] top-56 lg:top-80  lg:left-10" />
-          <img
-            src={Img3}
-            alt=""
-            className="absolute w-[260px] top-36 right-28 lg:w-[400px] lg:top-44 lg:left-44 "
-          />
-        </div>
-      </div> */}
-        <div className="relative left-0 right-0 w-[80%] mx-auto md:w-[80%] ">
-        <div className="w-[200px] absolute ">
+       <div className="w-[310px] mx-auto lg:w-[500px]">
+        <div className="relative lg:-top-72">
+        <div className="w-[200px] absolute lg:w-[400px]">
           <img className="" src={Img1}/>
         </div>
 
-        <div className="w-[140px] absolute left-44 -top-4">
+        <div className="w-[140px] absolute left-44 -top-4 lg:left-96 lg:w-[230px]">
           <img
             src={Img4}
             alt=""
@@ -59,16 +44,17 @@ export default function HeroSection() {
           />
           </div>
 
-          <div className="w-[103px] absolute top-48">
+          <div className="w-[103px] absolute top-48 lg:w-[150px] lg:top-96">
           <img src={Img2} alt="" className=""/>
           </div>
-          <div className="w-[230px] absolute top-28 left-20 ">
+          <div className="w-[230px] absolute top-28 left-20 lg:w-[420px] lg:top-44 lg:left-36">
           <img
             src={Img3}
             alt=""
             className=""
           />
           </div>
+        </div>
         </div>
     </div>
   );
